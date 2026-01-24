@@ -20,26 +20,13 @@ This repository contains an **experimental implementation of a Quantum Neural Ne
 * Dataset loading and preprocessing integrated.
 * Some quantum operations or output measurements may fail; full training pipeline is not yet stable.
 
-## How to Use
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/qnn-afir10.git
-   cd qnn-afir10
-   ```
-2. Install dependencies listed in `requirements.txt`.
-3. Review the scripts and comments to understand the intended workflow and current limitations.
-
-> ⚠️ Note: This code is for **exploratory and educational purposes** and may not produce fully accurate predictions.
 
 ## Future Work / TODOs
 
-* Fix broken quantum operations and measurement logic.
+* Fix broken quantum operations.
 * Implement a complete, stable training and evaluation pipeline.
 * Add detailed examples and visualizations of QNN outputs.
 * Benchmark against classical neural network models on the AFIR 10 dataset.
 
-## Contributions
 
 ## Contributions are welcome for experimental improvements, bug fixes, or discussion on QNN design strategies. This project is intended as a research exploration rather than production-ready code.
