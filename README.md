@@ -1,32 +1,62 @@
----
+# Quantum Neural Network (QNN) on AFIR-10  
 
-# Quantum Neural Network (QNN) – AFIR 10 Dataset
+## Overview
 
-**Status:** Work-in-Progress / Experimental
+This repository presents an experimental exploration of Quantum Neural Networks (QNNs) applied to the AFIR-10 dataset. The project is intentionally research-oriented, focusing on investigating the feasibility, limitations, and behavior of hybrid classical–quantum learning systems rather than achieving production-level performance.
 
-This repository contains an **experimental implementation of a Quantum Neural Network (QNN)** applied to the AFIR 10 dataset. While some functionality is currently broken, the project highlights research-oriented coding, hybrid classical-quantum techniques, and exploratory problem-solving.
+The codebase reflects an exploratory workflow: ideas are implemented, tested, observed, and sometimes abandoned. Broken components and unstable training behavior are documented as part of the learning process.
 
-## Project Goals
+## Research Motivation
 
-* Implement a QNN to classify data from the AFIR 10 dataset.
-* Explore encoding classical input features into qubits.
-* Experiment with quantum entanglement strategies to improve feature interactions.
-* Investigate quantum-inspired activation functions (e.g., sigmoid thresholds on qubit measurements).
-* Document challenges encountered when combining quantum circuits with classical dataset workflows.
+This project aims to examine fundamental questions in quantum machine learning, including:
 
-## Current Status
+- How classical features can be encoded into quantum states
+- Whether entanglement and quantum correlations meaningfully enhance representation learning
+- The practical challenges of training parameterized quantum circuits
+- The effectiveness of hybrid classical–quantum pipelines
+- The role of quantum-inspired techniques (e.g., surrogate gradients) when direct gradients are unavailable or unreliable
 
-* QNN structure implemented with basic forward pass.
-* Dataset loading and preprocessing integrated.
-* Some quantum operations or output measurements may fail; full training pipeline is not yet stable.
+Rather than claiming quantum advantage, the project emphasizes empirical insight and reflective analysis.
 
+## Current Progress
 
-## Future Work / TODOs
+### Implemented Components
 
-* Fix broken quantum operations.
-* Implement a complete, stable training and evaluation pipeline.
-* Add detailed examples and visualizations of QNN outputs.
-* Benchmark against classical neural network models on the AFIR 10 dataset.
+- Hybrid classical–quantum neural network architecture
+- Basic QNN forward pass using parameterized quantum circuits
+- AFIR-10 dataset loading and preprocessing
+- Integration with PyTorch training loops
+- Classical CNN baseline for performance comparison
+- Initial experiments involving:
+  - Dimensionality reduction prior to quantum encoding
+  - Measurement-based quantum outputs
+  - Surrogate-gradient-based optimization
 
+### Observations & Experimental Findings
 
-## Contributions are welcome for experimental improvements, bug fixes, or discussion on QNN design strategies. This project is intended as a research exploration rather than production-ready code.
+- QNN training frequently plateaus early, even when the CNN baseline continues improving
+- Gradient flow through quantum layers is often weak or noisy
+- Training stability is highly sensitive to:
+  - Encoding strategy
+  - Circuit depth
+  - Number of qubits
+  - Measurement aggregation method
+- In most configurations, classical preprocessing dominates performance
+
+## Known Limitations
+
+- Certain quantum operations or measurement pipelines may fail depending on backend versions
+- End-to-end training is not consistently stable
+- Current QNN performance does not surpass classical baselines
+- Results should not be interpreted as evidence of quantum advantage
+
+## Future Work
+
+Planned and proposed directions include:
+
+- Stabilizing the quantum training pipeline
+- Exploring alternative encoding schemes (angle, amplitude, hybrid)
+- Studying barren plateaus and gradient suppression
+- Visualization of quantum measurement distributions
+- Systematic benchmarking against classical models
+- Ablation studies isolating quantum vs. classical contributions
