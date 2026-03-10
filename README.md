@@ -4,7 +4,7 @@
 
 This repository presents an experimental exploration of Quantum Neural Networks (QNNs) applied to the AFIR-10 dataset. The project is intentionally research-oriented, focusing on investigating the feasibility, limitations, and behavior of hybrid classical–quantum learning systems rather than achieving production-level performance.
 
-The codebase reflects an exploratory workflow: ideas are implemented, tested, observed, and sometimes abandoned. Broken components and unstable training behavior are documented as part of the learning process.
+Ideas are implemented, tested, observed, and sometimes abandoned. Broken components and unstable training behavior are documented as part of the learning process.
 
 ## Research Motivation
 
@@ -16,7 +16,6 @@ This project aims to examine fundamental questions in quantum machine learning, 
 - The effectiveness of hybrid classical–quantum pipelines
 - The role of quantum-inspired techniques (e.g., surrogate gradients) when direct gradients are unavailable or unreliable
 
-Rather than claiming quantum advantage, the project emphasizes empirical insight and reflective analysis.
 
 ## Current Progress
 
@@ -60,3 +59,27 @@ Planned and proposed directions include:
 - Visualization of quantum measurement distributions
 - Systematic benchmarking against classical models
 - Ablation studies isolating quantum vs. classical contributions
+
+## Environment and Compatibility Notes
+
+Development of this project encountered several compatibility issues between quantum machine learning libraries and modern Python / deep learning environments. These issues currently prevent a stable end-to-end QNN training pipeline.
+
+Observed problems include:
+
+- TensorFlow Quantum incompatibilities with newer Keras / TensorFlow versions
+- PennyLane import failures caused by mismatches with recent JAX releases
+- Version conflicts between quantum libraries and Python 3.12
+- Backend-dependent failures when constructing parameterized quantum circuits
+
+
+### Planned Resolution
+
+Once compatibility issues are resolved, the following steps are planned:
+
+- Reintroduce a fully functional quantum circuit backend
+- Replace surrogate layers with true parameterized quantum circuits
+- Validate gradient flow through quantum layers
+- Benchmark quantum and classical models under identical conditions
+- Document the differences between surrogate and hardware-backed implementations
+
+This section is intentionally maintained to document the tooling limitations currently present in quantum machine learning ecosystems and to enable future continuation of the project once stable environments become available.
