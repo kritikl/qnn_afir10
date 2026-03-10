@@ -6,8 +6,6 @@ This repository presents an experimental exploration of Quantum Neural Networks 
 
 Ideas are implemented, tested, observed, and sometimes abandoned. Broken components and unstable training behavior are documented as part of the learning process.
 
-## Research Motivation
-
 This project aims to examine fundamental questions in quantum machine learning, including:
 
 - How classical features can be encoded into quantum states
