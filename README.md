@@ -1,4 +1,4 @@
-# Quantum Neural Network (QNN) on AFIR-10  
+# Hybrid Classical–Quantum Neural Network on AFIR-10
 
 ## Overview
 
